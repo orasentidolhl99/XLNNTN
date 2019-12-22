@@ -1,0 +1,20 @@
+asserts_hình_ảnh_thực_thi/
+	Ảnh_Chưa_Xử_Lý.png
+	Ảnh_Xử_Lý_Về_Tiếng_Anh.png
+	Ảnh_Xử_Lý_Về_Tiếng_Hoa.png
+	Ảnh_Xử_Lý_Về_Tiếng_Pháp.png
+	Ảnh_Xử_Lý_Về_Tiếng_Việt.png
+img_icon_logo/
+	Logo_Khoa_FIRA.png
+Pic_Train/
+
+Templates/
+	index.html
+Text_Word/
+	Một_vài_câu.txt
+Train_model/
+	lid.176.ftz
+	model_langind.ftz
+app.py
+Language_code.json
+Thư_viện_cần_cho_model.md
