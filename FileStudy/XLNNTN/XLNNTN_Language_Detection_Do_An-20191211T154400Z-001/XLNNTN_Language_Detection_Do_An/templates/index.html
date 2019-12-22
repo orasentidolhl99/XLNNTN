@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="language_code" xml:lang="language_code">
+<head>
+    <title>Natural Language Processing</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="https://1.bp.blogspot.com/-uHOaQCwBgG4/Xd-R9cQuOlI/AAAAAAAAUGY/xGGB_PKdst0CTF5w4bplaPVRtgQzEd_RwCLcBGAsYHQ/s1600/Logo_Khoa_FIRA.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        function clear_result() {
+            $('.result').text('')
+            $('textarea').text('')
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h1><p align="center">HỆ THỐNG NHẬN DẠNG NGÔN NGỮ</p></h1>
+    <h2>Xử Lý Ngôn Ngữ Tự Nhiên | Giảng viên: Huỳnh Quang Đức</h2> <br><br>
+    <p align="center">Xử lý ngôn ngữ trong tài liệu của bạn.</p>
+    <form method="post">
+        <div class="form-group">
+            <p><label for="txt">Nhập Tài Liệu:</label></p>
+            <textarea input type="text" placeholder="Mời bạn nhập vào một ngôn ngữ bất kỳ !!!" class="form-control" rows="8" name="txt" id="txt">{{txt}}</textarea>
+            <p align="center"><input type="submit" value="Xác Nhận" class="btn btn-success btn-lg" style="margin-top: 20px;" style="color: #00ff00;font-weight: bold;">
+                <input type="reset" value="Làm Mới" class="btn btn-default btn-lg" style="margin-top: 20px;" onclick="clear_result()"> </p>
+        </div>
+    </form>
+    <p class="result">
+    <h4> <p align="center">Dự đoán kết quả: </p> </h4>
+        {% if language %}
+            <p align="center">Ngôn ngữ này là: <strong>{{ language }}</strong></p>
+        {% endif %}
+        {% if language_code %}
+            <p align ="center">Mã ghi tắt của ngôn ngữ: <strong>{{ language_code }}</strong></p>
+        {% endif %}
+        {% if score %}
+            <p align="center">Điểm sau khi train: <em>{{ score }}</em></p>
+        {% endif %}
+        {% if error %}
+            <p style="color: red;font-weight: bold;">{{error}}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
